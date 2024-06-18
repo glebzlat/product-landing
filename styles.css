@@ -24,6 +24,7 @@ html {
 
 body {
   background-color: var(--body-bg-color);
+  overflow-x: hidden;
 }
 
 h2 {
@@ -296,7 +297,6 @@ h2 {
 /* FOOTER */
 
 #footer {
-  width: 100vw;
   height: 10rem;
   display: flex;
   justify-content: center;
