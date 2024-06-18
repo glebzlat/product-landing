@@ -1,0 +1,333 @@
+:root {
+  --header-height: 4rem;
+  --main-fg-color: #e0e0e0;
+
+  --body-bg-color: #000c12;
+  --section-1-bg-color: #04121a;
+  --section-2-bg-color: #091a24;
+  --section-3-bg-color: #0d1f29;
+}
+
+html {
+  font-family: Besley, serif;
+  color: var(--main-fg-color);
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--body-bg-color);
+}
+
+h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.5rem;
+  color: var(--main-fg-color);
+}
+
+.content-wrapper {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.section {
+  display: flex;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - var(--header-height));
+  scroll-margin-top: var(--header-height);
+}
+
+.video {
+  max-width: 560px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 530px) {
+  .section {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    height: 100%;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+/* HEADER */
+
+#header {
+  position: fixed;
+  top: 0;
+  background-color: #050505;
+  height: var(--header-height);
+  width: 100%;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+#nav-bar li {
+  display: inline;
+}
+
+.nav-link {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.7rem;
+  padding: 0 0.2em;
+  text-decoration: none;
+  color: #fff;
+  margin: 0 0.8em;
+}
+
+.nav-link:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* FIRST SECTION */
+
+.first-section {
+  background-image: url("https://unsplash.com/photos/gEQlN_TDwe4/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzE3OTI0MTA2fA&force=true&w=1920");
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  text-align: center;
+}
+
+.first-section h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 6rem;
+  padding: 0.2em 0.2em 0.1em 0.2em;
+  line-height: 5rem;
+  background-color: var(--main-fg-color);
+  color: #000;
+}
+
+.first-section p {
+  margin: 0.1em 1em;
+  color: var(--main-fg-color);
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 900px) {
+  .first-section h1 {
+    font-size: 4rem;
+  }
+
+  .first-section p {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .first-section h1 {
+    font-size: 3rem;
+  }
+
+  .first-section p {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .first-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .first-section p {
+    font-size: 1.2rem;
+  }
+}
+
+/* FEATURES SECTION */
+
+#about {
+  gap: 50px;
+  background-color: var(--section-1-bg-color);
+}
+
+.desc {
+  max-width: 600px;
+}
+
+.desc p {
+  margin-top: 15px;
+}
+
+/* SOUND SECTION */
+
+#sound {
+  background-color: var(--section-2-bg-color);
+  gap: 50px;
+}
+
+/* PRICING SECTION */
+
+#pricing {
+  background-color: var(--section-3-bg-color);
+}
+
+.pricing-grid {
+  display: grid;
+  margin: 0 1.5rem;
+  gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-col-span-3 {
+  grid-column: span 3;
+}
+
+/* product subgrid */
+
+.product {
+  grid-row: span 5;
+  border: 1px solid var(--main-fg-color);
+  display: grid;
+  grid-template-rows: subgrid;
+  gap: 0;
+}
+
+.product h2,
+.product h3 {
+  text-align: center;
+  align-self: center;
+}
+
+.product img {
+  width: 100%;
+  min-width: 220px;
+}
+
+.product h3 {
+  background-color: var(--main-fg-color);
+  color: #000;
+}
+
+.product p {
+  margin: 10px 20px;
+}
+
+/* submit form */
+
+.feedback-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: #000;
+  text-align: center;
+}
+
+.feedback-container p {
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+#email {
+  font-family: Beasley, serif;
+  font-size: 1rem;
+  width: 90%;
+  padding: 7px;
+  background-color: var(--main-fg-color);
+  border: 0;
+}
+
+#submit {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.5rem;
+  padding: 8px;
+  display: block;
+  margin: 20px auto 5px auto;
+  color: var(--main-fg-color);
+  background-color: #000;
+  border: 0;
+  cursor: pointer;
+}
+
+#submit:hover {
+  color: #000;
+  background-color: var(--main-fg-color);
+}
+
+@media only screen and (max-width: 720px) {
+  #pricing {
+    height: 100%;
+  }
+
+  .pricing-grid {
+    display: block;
+  }
+
+  .product {
+    min-width: 220px;
+    max-width: 400px;
+    /* width: 70%; */
+    margin: 1.5rem auto;
+  }
+
+  .feedback-container {
+    min-width: 220px;
+    max-width: 400px;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* FOOTER */
+
+#footer {
+  width: 100vw;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-content {
+  width: 100%;
+  height: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.footer-nav {
+  list-style: none;
+}
+
+.footer-nav li {
+  margin: 10px;
+}
+
+.footer-link {
+  color: var(--main-fg-color);
+}
+
+#copyright {
+  text-align: right;
+}
+
+#copyright span {
+  display: block;
+}
