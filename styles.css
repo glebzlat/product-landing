@@ -8,6 +8,12 @@
   --section-3-bg-color: #0d1f29;
 }
 
+@media only screen and (max-width: 435px) {
+  :root {
+    --header-height: 7rem;
+  }
+}
+
 html {
   font-family: Besley, serif;
   color: var(--main-fg-color);
@@ -36,6 +42,8 @@ h2 {
 .content-wrapper {
   margin: 0 auto;
   max-width: 1000px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .section {
@@ -76,12 +84,20 @@ h2 {
   width: 100%;
 }
 
+#header-img {
+  width: 170px;
+}
+
 .header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100%;
   width: 100%;
+}
+
+#nav-bar {
+  text-align: right;
 }
 
 #nav-bar li {
